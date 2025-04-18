@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+	  <!-- Sección de propiedades generales del proyecto -->
+
+	  <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+	  <InvariantGlobalization>false</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<!-- Grupo de referencias a paquetes NuGet necesarios para el funcionamiento del proyecto -->
+	  <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.0" />
+	  <!-- Adaptador que permite utilizar Entity Framework con componentes de tipo QuickGrid (para visualización de datos en Blazor) -->
+
+	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.3" />
+	  <!-- Paquete principal de Entity Framework Core para trabajar con ORM en .NET -->
+
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.3" />
+	  <!-- Proveedor de base de datos para usar SQL Server con Entity Framework Core -->
+
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.3">
+		  <!-- Herramientas para habilitar comandos de EF Core en consola como 'migrations', 'update-database', etc. -->
+
+		  <PrivateAssets>all</PrivateAssets>
+		  <!-- Esta propiedad indica que estas herramientas no se propagarán a otros proyectos que dependan de este -->
+
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		  <!-- Define qué activos del paquete se deben incluir para su uso interno -->
+	  </PackageReference>
+
+	  <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+	  <!-- Herramientas de scaffolding (generación automática de código) para Visual Studio, útil para crear controladores, modelos, vistas, etc. -->
+
+	  <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+	  <!-- Paquete que permite integrar Swagger para generar documentación interactiva de la API REST -->
+  </ItemGroup>
+
+</Project>

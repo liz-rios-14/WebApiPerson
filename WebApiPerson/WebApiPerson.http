@@ -1,0 +1,8 @@
+// Define la URL base de la API
+@WebApiPerson_HostAddress = http://localhost:5165
+
+// Prueba un endpoint GET genérico (probablemente autogenerado)
+GET {{WebApiPerson_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
